@@ -1,5 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body></body>
+    <head>
+        <title>Attemp Quiz - LMS</title>
+        <h1 style = "font-size: 50px;"> 
+            <img src = "logo.jpg" alt = "LMS logo" width = "20%">LMS - Learning Management System</td>
+        </h1>
+    </head>
+    <body>
+        <div>
+            <p><a href = "index.html">Login</a> | <a href = "leaderboard.html">Leaderboard</a> | <a href = "course_view.html">About LMS</a></p>
+        </div>    
+        <main>
+            <h2 style="font-size: 30px;"><img src = "banner.jpg" alt = "Quiz Time" width = "100%"><br>
+            Course Name: Data Structures<br><br>
+            Course Code: DS371<br>
+            </h2>
+            <div style="font-size:larger">
+                <p>Topic: Bases of Data Structures</p>
+                <p>Deadline: 11:59 PM, February 10, 2025</p>
+                <p>Nb of attemps: 1</p>
+            </div>
+            <div style="font-size: larger;">
+                <h3>Question 1</h3>
+                <p>How is a data structure important?</p>
+                <form>
+                    <input type="radio" id="answer1_1" name="Q1" value="correct">
+                    <label for="answer1_1">It stores and organizes data in a computer.</label><br>
+                    <input type="radio" id="answer1_2" name="Q1" value="incorrect">
+                    <label for="answer1_2">It removes viruses from a computer.</label><br>
+                    <input type="radio" id="answer1_3" name="Q1" value="incorrect">
+                    <label for="answer1_3">It speeds up the processing time of a computer.</label>
+                    <br>
+                    <button type ="button">Submit Answer</button>
+                </form>
+                <h3>Question 2</h3>
+                <p>Which of the following are types of data? (Select all that apply)</p>
+                <form>
+                    <input type="checkbox" id="answer2_1" name="Q2" value="correct">
+                    <label for="answer2_1">Integer</label><br>
+                    <input type="checkbox" id="answer2_2" name="Q2" value="incorrect">
+                    <label for="answer2_2">Loop</label><br>
+                    <input type="checkbox" id="answer2_3" name="Q2" value="correct">
+                    <label for="answer2_3">Character</label>
+                    <br>
+                    <button type ="button">Submit Answer</button>
+                </form>
+                <br>
+                <form action="leaderboard.html">
+                    <button type="Submit">Finish Quiz</button>
+                </form>
+            </div>
+        </main>
+    <footer>
+        <p>&copy; 2025 LMS. All rights reserved.</p>
+    </footer>
+    </body>
 </html>
