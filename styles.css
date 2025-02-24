@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: #004080;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0;
+
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    background-color: #003366;
+    justify-content: space-evenly;
+    padding: 10px;
+
+}
+
+.navigation a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.navigation a:hover{
+    text-decoration: underline;
+}
+
+#about_lms {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+main {
+    background-color: #e4e4e4;
+    text-align: center;
+    padding: 20px;
+}
+
+.login {
+    display: flex;
+    background-color: #d4d4d4;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px 5px #cccccc;
+}
+
+.login input {
+    margin-left: 125px;
+    margin-right: 125px;
+    background-color: lightyellow;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: darkgrey;
+    border-width: 3px;
+}
+
+.button {
+    color: #ffffff;
+    background-color: #008000;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 0px;
+}
+
+.button:hover {
+    background-color: #006600;
+}
+
+main h2 {
+    color: #004080;
+    margin-top: 0;
+}
+
+form a {
+    color: #004080;
+    text-decoration: none;
+}
+
+select {
+    background-color: lightyellow;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+td {
+    background-color: #e6f2ff;
+    box-shadow: 3px 3px 5px 5px #cccccc;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+td .accept {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 5px;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+td .decline {
+    background-color: #d32f2f;
+    color: #ffffff;
+    padding: 5px;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+td button:hover {
+    background-color: #265e28;
+}
+
+td .decline:hover {
+    background-color: #821b1b;
+}
+
+footer {
+    width: 100%;
+    background-color: #004080;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: #ffffff;
+}

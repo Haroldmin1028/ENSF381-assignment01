@@ -3,17 +3,18 @@
     <head>
         <link href="styles.css" type="text/css" rel="stylesheet" />
         <title>Course View - LMS</title>
-        <img src = "logo.jpg" alt = "LMS logo" width = "10%">
-        <h1>LMS - Learning Management System</h1>
     </head>
     <body>
-        <h2>LMS - Course View</h2>
+        <header>
+            <img src = "logo.jpg" alt = "LMS logo" width = "10%">
+            <h1>LMS - Learning Management System</h1>
+        </header>
         <div class="navigation">
-            <p><a href = "index.html">Homepage</a></p>
+            <a href = "index.html">Homepage</a>
         </div>
         <main>
+            <h2>LMS - Course View</h2>
             <div>
-                <br>
                 <label for="term">Select Term:</label>
                 <select id="term" name="term">
                     <option value="winter-2025">Winter 2025</option>
@@ -23,6 +24,7 @@
                 </select>
             </div>
             <div>
+                <br>
                 <h2>Enrolled Courses</h2>
                 <hr>
                 <table border = "0" style = "width: 100%;">
@@ -62,6 +64,7 @@
                         <td></td>
                     </tr>
                 </table>
+                <br>
                 <h2>Pending Invitations</h2>
                 <hr>
                 <table border = "0" style = "width: 100%">
@@ -70,15 +73,15 @@
                             <img width = "100%" src = "course2.jpg" alt = "Pending Course"><br><br>
                             Course Name: Data Science<br><br>
                             Course Code: WD381<br><br>
-                            <button style = "background: lightgreen" type="button">Accept</button>
-                            <button style = "background: pink" type="button">Decline</button>
+                            <button type="button" class="accept">Accept</button>
+                            <button type="button" class="decline">Decline</button>
                         </td>
                         <td width = "33%">
                             <img width = "100%" src = "course2.jpg" alt = "Pending Course"><br><br>
                             Course Name: Machine Learning<br><br>
                             Course Code: ML105<br><br>
-                            <button style = "background: lightgreen" type="button">Accept</button>
-                            <button style = "background: pink" type="button">Decline</button>
+                            <button type="button" class="accept">Accept</button>
+                            <button type="button" class="decline">Decline</button>
                         </td>
                         <td>  
                         </td>

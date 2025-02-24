@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="styles.css" type="text/css" rel="stylesheet" />
         <title>Login - LMS</title>
-        <img src = "logo.jpg" alt = "LMS logo" width = "10%">
-        <h1>LMS - Learning Management System</h1>
     </head>
     <body>
-        <h2>LMS Login</h2>
-        <div>
-            <p><a href = "index.html">Homepage</a></p>
+        <header>
+            <img src = "logo.jpg" alt = "LMS logo" width = "10%">
+            <h1>LMS - Learning Management System</h1>
+        </header>
+        <div class = "navigation">
+            <a href = "index.html">Homepage</a>
         </div>
         <main>
+            <h2>LMS Login</h2>
             <form>
-                <label for="name">Username:</label>
-                <input type="text" id="name" name="username" required>
+                <div class = "login">
+                    <label for="name">Username:</label>
+                    <input type="text" id="name" name="username" required>
+                    <br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <br><br>
+                </div>
                 <br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <br><br>
-                <input type="button" value="Login">
+                <input type="button" value="Login" class = "button">
                 <br><br>
                 <a href = "">Forgot Password?</a>
                 <br>
