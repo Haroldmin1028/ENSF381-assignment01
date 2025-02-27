@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login - LMS</title>
-        <img src = "logo.jpg" alt = "LMS logo" width = "10%">
-        <h1>LMS - Learning Management System</h1>
+        <link href="styles.css" type="text/css" rel="stylesheet" />
+        <title>Quiz - LMS</title>
     </head>
     <body>
-        <div>
-            <p><a href = "index.html">Homepage</a> | <a href = "leaderboard.html">Leaderboard</a> | <a href = "course_view.html">Courses</a></p>
+        <header>
+            <img src = "logo.jpg" alt = "LMS logo" width = "10%">
+            <h1>LMS - Learning Management System</h1>
+        </header>
+        <div class = "navigation">
+            <a href = "index.html">Homepage</a>
+            <a href = "leaderboard.html">Leaderboard</a>
+            <a href = "course_view.html">Courses</a>
         </div>    
         <main>
-            <h2 style="font-size: 30px;"><img src = "banner.jpg" alt = "Quiz Time" width = "100%"><br>
+            <img id = "quiz_banner" src = "banner.jpg" alt = "Quiz Time"><br>
+            <div class="C-Q_details">
+            <h2 style="font-size: 30px;">
             Course Name: Data Structures<br><br>
             Course Code: DS371<br>
             </h2>
-            <div style="font-size:larger">
                 <p>Topic: Bases of Data Structures</p>
                 <p>Deadline: 11:59 PM, February 10, 2025</p>
                 <p>Nb of attemps: 1</p>
@@ -22,31 +28,32 @@
             <div style="font-size: larger;">
                 <h3>Question 1</h3>
                 <p>What is a data structure?</p>
-                <form>
+                <form class="Question">
                     <input type="radio" id="answer1_1" name="Q1" value="correct">
                     <label for="answer1_1">A way to store and organize data</label><br>
                     <input type="radio" id="answer1_2" name="Q1" value="incorrect">
                     <label for="answer1_2">A type of programming language</label><br>
                     <input type="radio" id="answer1_3" name="Q1" value="incorrect">
                     <label for="answer1_3">A computer hardware component</label>
+                    </form>
                     <br>
-                    <button type ="button">Submit Answer</button>
-                </form>
+                    <button class = "quiz_button" type ="button">Submit Answer</button>
                 <h3>Question 2</h3>
                 <p>Which of the following are types of data? (Select all that apply)</p>
-                <form>
+                <form class="Question">
                     <input type="checkbox" id="answer2_1" name="Q2" value="correct">
                     <label for="answer2_1">Integer</label><br>
                     <input type="checkbox" id="answer2_2" name="Q2" value="incorrect">
                     <label for="answer2_2">Loop</label><br>
                     <input type="checkbox" id="answer2_3" name="Q2" value="correct">
                     <label for="answer2_3">Character</label>
-                    <br>
-                    <button type ="button">Submit Answer</button>
                 </form>
                 <br>
+                    <button class = "quiz_button" type ="button">Submit Answer</button>
+                <br>
+                <br>
                 <form action="leaderboard.html">
-                    <button type="Submit">Finish Quiz</button>
+                    <button class = "finish_button" type="Submit">Finish Quiz</button>
                 </form>
             </div>
         </main>

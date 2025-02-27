@@ -40,6 +40,7 @@ header h1 {
     margin: 20px;
 }
 
+
 main {
     background-color: #e4e4e4;
     text-align: center;
@@ -128,6 +129,56 @@ td button:hover {
 
 td .decline:hover {
     background-color: #821b1b;
+}
+
+#quiz_banner {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.C-Q_details{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightblue;
+    padding: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.Question{
+    padding: 25px 50px;
+    background-color: #cacaca;
+    text-align: left;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.quiz_button{
+    background-color: lightblue;
+    color: black;
+    padding: 5px;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.quiz_button:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+.finish_button{
+    background-color: #d32f2f;
+    color: white;
+    padding: 5px;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.finish_button:hover{
+    background-color: #821b1b;
+    color: white;
 }
 
 footer {
