@@ -82,6 +82,12 @@ main {
     background-color: #006600;
 }
 
+#login-popup {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
 main h2 {
     color: #004080;
     margin-top: 0;
@@ -98,12 +104,16 @@ select {
     padding: 5px;
 }
 
-td .course{
+td .course {
     background-color: #e6f2ff;
     box-shadow: 3px 3px 5px 5px #cccccc;
     padding: 20px;
     margin: 15px;
     border-radius: 10px;
+}
+
+.course:hover {
+    background-color: #ffffff;
 }
 
 td .accept {
