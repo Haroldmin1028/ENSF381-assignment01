@@ -70,7 +70,7 @@ main {
     border-width: 3px;
 }
 
-.button {
+.loginbutton {
     color: #ffffff;
     background-color: #008000;
     padding: 10px;
@@ -78,8 +78,22 @@ main {
     border-width: 0px;
 }
 
-.button:hover {
+.loginbutton:hover {
     background-color: #006600;
+}
+
+.signupbutton {
+    color: #ffffff;
+    background-color: #4caf50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+.signupbutton:hover {
+    background-color: #45a049;
+    opacity: 1.0
 }
 
 #login-popup {
