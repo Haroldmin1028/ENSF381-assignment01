@@ -102,6 +102,12 @@ main {
     background-color: #ffffff;
 }
 
+#signup-popup {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
 main h2 {
     color: #004080;
     margin-top: 0;
