@@ -46,13 +46,13 @@
                 else if (!/[A-Z]/.test(password)) {return `Invalid password (Must contain at least one uppercase letter)`;}
                 else if (!/[a-z]/.test(password)) {return `Invalid password (Must contain at least one lowercase letter)`;}
                 else if (!/[0-9]/.test(password)) {return `Invalid password (Must contain at least one number)`;}
-                else if (!/[!@#$%^&*()-_=+[\]{}|;:'",.<>?/`~]/.test(password)) {return `Invalid password (Must contain at least one special character)`;}
+                else if (!/[-!@#$%^&*()_=+[\]{}|;:'",.<>?/`~]/.test(password)) {return `Invalid password (Must contain at least one special character)`;}
                 else if (password.includes(" ")) {return `Invalid password (Must not contain spaces)`;}
                 else {return ``;}
             }
             function validateEmail(email) {
                 if (!email.includes("@")) {return `Invalid email (Must contain '@')`;}
-                else if (!email.include(".")) {return `Invalid email (Must contain '.')`;}
+                else if (!email.includes(".")) {return `Invalid email (Must contain '.')`;}
                 else if (email.includes(" ")) {return `Invalid email (Must not contain spaces)`;}
                 else {return ``;}
             }
@@ -76,13 +76,17 @@
                 const success = document.createElement('p');
                 success.textContent = `Signup successful! Redirecting to login...`;
 
+                if (checkUsername.textContent == '' && checkPassword.textContent == '' && password == confirmPassword && checkEmail.textContent == '') {
+                    userDiv.appendChild(success);
+                    signupPopup.appendChild(userDiv);
+                    setTimeout(() => {window.location.href = "login.html";}, 2000);
+                }
                 if (checkUsername.textContent != '') {userDiv.appendChild(checkUsername);}
                 if (checkPassword.textContent != '') {userDiv.appendChild(checkPassword);}
                 if (password !== confirmPassword) {userDiv.appendChild(doNotMatch);}
                 if (checkEmail.textContent != '') {userDiv.appendChild(checkEmail);}
                 
                 signupPopup.appendChild(userDiv);
-                /*need step to otherwise print success*/
             }
         </script>
     </body>
