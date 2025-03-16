@@ -56,32 +56,35 @@
                             <a href = "attempt_quiz.html">Attempt Quiz</a>
                         </td>
                         <td width = 33% class = "course">
-                            <img width = "100%" src = "course1.jpg" alt = "Enrolled Course"><br><br>
+                            <img width = "100%" src = "course1.jpg" id = "enrolledimage" alt = "Enrolled Course"><br><br>
                             Course Name: Software Architectures<br><br>
                             Course Code: SA396<br><br>
                             <a href = "attempt_quiz.html">Attempt Quiz</a>
                         </td>
-                        <td class = "course"></td>
+                        <td width = 33% id = "enrolled1" class = "course"></td>
+                    </tr>
+                    <tr>
+                        <td width = 33% id = "enrolled2" class = "course"></td>
                     </tr>
                 </table>
                 <br>
                 <h2>Pending Invitations</h2>
                 <hr>
                 <table border = "0" style = "width: 100%">
-                    <tr>
-                        <td width = "33%" class = "course">
-                            <img width = "100%" src = "course2.jpg" alt = "Pending Course"><br><br>
-                            Course Name: Data Science<br><br>
-                            Course Code: WD381<br><br>
-                            <button type="button" class="accept" onclick="accepted()">Accept</button>
-                            <button type="button" class="decline" onclick="declined()">Decline</button>
+                    <tr id = "pending">
+                        <td width = "33%" id = "pending1" class = "course">
+                            <img width = "100%" id = "pendingimage1" src = "course2.jpg" alt = "Pending Course"><br><br>
+                            <div id = "coursename1">Course Name: Data Science</div><br>
+                            <div id = "coursecode1">Course Code: WD381</div><br>
+                            <button type="button" class="accept" onclick="accepted1()">Accept</button>
+                            <button type="button" class="decline" onclick="declined1()">Decline</button>
                         </td>
-                        <td width = "33%" class = "course">
-                            <img width = "100%" src = "course2.jpg" alt = "Pending Course"><br><br>
-                            Course Name: Machine Learning<br><br>
-                            Course Code: ML105<br><br>
-                            <button type="button" class="accept" onclick="accepted()">Accept</button>
-                            <button type="button" class="decline" onclick="declined()">Decline</button>
+                        <td width = "33%" id = "pending2" class = "course">
+                            <img width = "100%" id = "pendingimage2" src = "course2.jpg" alt = "Pending Course"><br><br>
+                            <div id = "coursename2">Course Name: Machine Learning</div><br>
+                            <div id = "coursecode2">Course Code: ML105</div><br>
+                            <button type="button" class="accept" onclick="accepted2()">Accept</button>
+                            <button type="button" class="decline" onclick="declined2()">Decline</button>
                         </td>
                         <td>  
                         </td>
@@ -90,12 +93,61 @@
             </div>
         </main>
         <script>
-            //add div elements for each table section, use add or remov echidl
-            function accepted() {
-                
+            const pending = document.getElementById("pending");
+            const pending1 = document.getElementById("pending1");
+            const pending2 = document.getElementById("pending2");
+            const enrolled1 = document.getElementById("enrolled1");
+            const enrolled2 = document.getElementById("enrolled2");
+
+            const coursename1 = document.getElementById("coursename1");
+            const coursecode1 = document.getElementById("coursecode1");
+            const coursename2 = document.getElementById("coursename2");
+            const coursecode2 = document.getElementById("coursecode2");
+
+            const attemptquiz1 = document.createElement('a');
+            attemptquiz1.href = "attempt_quiz.html";
+            attemptquiz1.textContent = "Attempt Quiz";
+            const attemptquiz2 = document.createElement('a');
+            attemptquiz2.href = "attempt_quiz.html";
+            attemptquiz2.textContent = "Attempt Quiz";
+
+            const enrolledimage1 = document.createElement('img');
+            enrolledimage1.src = "course1.jpg";
+            enrolledimage1.alt = "Enrolled Course";
+            enrolledimage1.style.width = "100%";
+            const enrolledimage2 = document.createElement('img');
+            enrolledimage2.src = "course1.jpg";
+            enrolledimage2.alt = "Enrolled Course";
+            enrolledimage2.style.width = "100%";
+
+            const linebreak1_1 = document.createElement('br');
+            const linebreak1_2 = document.createElement('br');
+            const linebreak2_1 = document.createElement('br');
+            const linebreak2_2 = document.createElement('br');
+
+            function accepted1() {
+                pending.removeChild(pending1);
+                enrolled1.appendChild(enrolledimage1);
+                enrolled1.appendChild(coursename1);
+                enrolled1.appendChild(linebreak1_1);
+                enrolled1.appendChild(coursecode1);
+                enrolled1.appendChild(linebreak1_2);
+                enrolled1.appendChild(attemptquiz1);
             }
-            function declined() {
-                
+            function accepted2() {
+                pending.removeChild(pending2);
+                enrolled2.appendChild(enrolledimage2);
+                enrolled2.appendChild(coursename2);
+                enrolled2.appendChild(linebreak2_1);
+                enrolled2.appendChild(coursecode2);
+                enrolled2.appendChild(linebreak2_2);
+                enrolled2.appendChild(attemptquiz2);
+            }
+            function declined1() {
+                pending.removeChild(pending1);
+            }
+            function declined2() {
+                pending.removeChild(pending2);
             }
         </script>
     </body>
