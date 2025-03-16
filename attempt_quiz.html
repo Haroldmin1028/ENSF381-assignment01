@@ -21,6 +21,34 @@
             Course Name: Data Structures<br><br>
             Course Code: DS371<br>
             </h2>
+            <h2 id = "timer" style = "color: brown;">TIMER</h2>
+            <script>
+                const timer = document.getElementById("timer");             
+                var minute = 10;
+                var second = 0;
+                var x = setInterval(function() {
+                    if(second < 0){
+                        minute--;
+                        second = 59;
+                    }
+                    if(second <=9){
+                    second = "0" + second;
+                    }
+                    if(minute <=9){
+                    minute -= "0";
+                    minute = "0" + minute;
+                    }
+                    timer.textContent = "Remaining Time: " + minute + ":" + second;
+                    if(second <= 0 && minute <= 0){
+                        clearInterval(x);
+                        timer.textContent = "Time's up!";
+                        setTimeout(function() {
+                            window.location.href = "leaderboard.html";
+                        }, 3000);
+                    }
+                    second--;
+                }, 1000);
+            </script>
                 <p>Topic: Bases of Data Structures</p>
                 <p>Deadline: 11:59 PM, February 10, 2025</p>
                 <p>Nb of attemps: 1</p>
@@ -28,19 +56,36 @@
             <div style="font-size: larger;">
                 <h3>Question 1</h3>
                 <p>What is a data structure?</p>
-                <form class="Question">
+                <form class="Question" id = "Question1">
                     <input type="radio" id="answer1_1" name="Q1" value="correct">
                     <label for="answer1_1">A way to store and organize data</label><br>
                     <input type="radio" id="answer1_2" name="Q1" value="incorrect">
                     <label for="answer1_2">A type of programming language</label><br>
                     <input type="radio" id="answer1_3" name="Q1" value="incorrect">
                     <label for="answer1_3">A computer hardware component</label>
-                    </form>
-                    <br>
-                    <button class = "quiz_button" type ="button">Submit Answer</button>
+                </form>
+                <br> 
+                <button class = "quiz_button" type ="button" onclick="ValidateRadio()">Submit Answer</button>                  
+                <script>
+                    function ValidateRadio() {
+                        var radios = document.getElementsByName('Q1');
+                        var value = false;
+                        for (var i = 0; i < radios.length; i++) {
+                            if (radios[i].checked) {
+                                value = true; 
+                                break;      
+                            }
+                        }
+                        if (value){
+                            alert("Selection saved!");
+                        }  else{
+                            alert("Question 1 is unanswered!");
+                        }
+                    }
+                </script>
                 <h3>Question 2</h3>
                 <p>Which of the following are types of data? (Select all that apply)</p>
-                <form class="Question">
+                <form class="Question" id = "Question2">
                     <input type="checkbox" id="answer2_1" name="Q2" value="correct">
                     <label for="answer2_1">Integer</label><br>
                     <input type="checkbox" id="answer2_2" name="Q2" value="incorrect">
@@ -49,12 +94,81 @@
                     <label for="answer2_3">Character</label>
                 </form>
                 <br>
-                    <button class = "quiz_button" type ="button">Submit Answer</button>
+                <button class = "quiz_button" type ="button"  onclick="ValidateCheckbox()">Submit Answer</button>
+                <script>
+                    function ValidateCheckbox() {
+                        var checkboxes = document.getElementsByName('Q2');
+                        var value = false;
+                        for (var i = 0; i < checkboxes.length; i++) {
+                            if (checkboxes[i].checked) {
+                                value = true;       
+                            }
+                        }
+                        if (value){
+                            alert("Selection saved!");
+                        }  else{
+                            alert("Question 2 is unanswered!");
+                        }
+                    }
+                </script>
                 <br>
                 <br>
-                <form action="leaderboard.html">
-                    <button class = "finish_button" type="Submit">Finish Quiz</button>
+                <form id = "finsh">
+                    <button class = "finish_button" type="button" onclick="getResult()">Finish Quiz</button>
                 </form>
+                <h3 id = "score" style = "color: brown;">Results: --/100</h3>
+                <script>
+                    const score = document.getElementById("score");
+                    var Q1_score = 0;
+                    var Q2_score = 0;
+                    let Q1Answered = false  
+                    let Q2Answered = false                
+                    function getResult(){
+                        const radios = document.getElementsByName('Q1');
+                        for (let i = 0; i < radios.length; i++) {
+                            if (radios[i].checked) {
+                                Q1Answered = true;
+                                if (radios[i].value === 'correct') {
+                                    Q1_score = 50;
+                                }
+                                break;
+                            }
+                        }
+
+                        if (!Q1Answered){
+                            alert("Question 1 is unanswered.");
+                            return;
+                        }  
+
+                        const checkboxes = document.getElementsByName('Q2');
+                        let Q2Answered = false;
+                        for (let i = 0; i < checkboxes.length; i++) {
+                            if (checkboxes[i].checked) {
+                                Q2Answered = true;
+                                if (checkboxes[i].value === 'correct') {
+                                    Q2_score += 25;
+                                }
+                            }
+                        }
+
+                        if (!Q2Answered) {
+                            alert("Quenstion 2 is unanswered.");
+                            return;
+                        }
+
+                    var overall_score = Q1_score + Q2_score;
+                    score.textContent = "Results: " + overall_score + "/100";
+
+                    setTimeout(function() {
+                        alert("Redirecting to leaderboard.html in a few seconds...");
+                    }, 500);
+
+                    setTimeout(function() {
+                        window.location.href = "leaderboard.html";
+                    }, 4000);
+
+                    }
+                </script>
             </div>
         </main>
     <footer>
